@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+
+body{
+    font-family: "Noto Sans KR", "sans-serif";
+    margin: 0;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    font-size: 300;
+    margin: 0;
+}
+
+.titleBar > p{
+    color: rgb(204,204,204);
+    text-align: center;
+    font-size: 11px;
+    margin: 0;
+}
+
+div{
+    transition: transform 0.5s;
+}
+
+.titleBar{
+    z-index: 999;
+    width: 100vw;
+    height: 3.5vh;
+    line-height: 3.5vh;
+    background-color: rgb(60, 60, 60);
+    position: fixed;
+}
+
+.navArea{
+    z-index: 998;
+    width: 15vw;
+    height: 96.5vh;
+    left: 0%;
+    background-color: rgb(37, 37, 38);
+    padding-top: 3.5vh;
+    position: fixed;
+}
+
+.content{
+    position: absolute;
+    padding-top: 3.5vh;
+    z-index: 998;
+    right: 0%;
+    height: 66.5vh;
+    width: 85vw;
+    top: 0%;
+    
+    background-color: rgb(30, 30, 30);
+}
+
+.tree{
+    user-select: none;
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.tree ul{
+    list-style: none;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.tree > li > ul > li:hover{
+    background-color: rgb(42,45,46);
+    cursor: pointer;
+}
+
+.tree label:hover{
+    cursor: pointer;
+}
+
+.tree label:before{
+    content: "\e801";
+    font-family: fontello;
+}
+
+.tree a:before{
+    content: "\e802";
+    font-family: fontello;
+}
+
+.tree input[type="checkbox"]:checked + label:before{
+    content: '\e800';
+    font-family: fontello;
+}
+
+.tree input[type="checkbox"]{
+    display: none;
+}
+
+.tree input[type="checkbox"]:checked ~ ul{
+    display: none;
+}
+
+.tree *:before{
+    width: 16px;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(193, 204, 193);
+}
+
+#menu{
+    color: rgb(193, 204, 193);
+}
+
+.designWrap{
+    z-index: 999;
+    position: absolute;
+    width: 85vw;
+    height: 30vh;
+    background-color: rgb(30,30,30);
+    bottom: 0%;
+    right: 0;
+    border-top: solid 2px;
+    border-color: rgb(71, 71, 71);
+}
+
+.content > p{
+    color: rgb(204,204,204);
+}
+
+.tabButtonNav{
+    display: flex;
+    position: relative;
+    z-index: 999;
+    top: 0%;
+    width: 85vw;
+    height: 4vh;
+    background-color: rgb(37, 37, 38);
+    right: 0%;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.tabButtonNav input[type="radio"] + label{
+    justify-content : center;
+    background-color: #2D2D2D;
+    color: #969696;
+    font-size: 15px;
+    height: 100%;
+    width: 7vw;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tabButtonNav input[type="radio"]:checked + label{
+    background-color: #1E1E1E;
+}
+
+.conbox{
+    width: 100%;
+    color: #969696;
+    height: 57vh;
+    bottom: 0;
+    display: none;
+}
+
+#con1{display: block;}
+
+.designWrap input[type="radio"] + label{
+    display: inline-block;
+    font-size: 10px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #979797;
+    cursor: pointer;
+    user-select: none;
+}
+
+.designWrap input[type="radio"]:checked + label{
+    color: #E7E7E7;
+}
+
+.designWrap label::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.5px;
+    background-color: #E7E7E7;
+}
+
+.designWrap input[type="radio"]:checked + label::after{
+    width: 100%;
+}
+
+.designConbox{
+    padding-left: 1vw;
+    color: #CCCCCC;
+    width: 75vw;
+    height: 89.5%;
+    display: none;
+    font-size: 13px;
+    user-select: none;
+}
+
+input[id="problems"]:checked ~ #problemsCon{display: block;}
+input[id="output"]:checked ~ #outputCon{display: block;}
+input[id="debugConsole"]:checked ~ #debugCon{display: block;}
+input[id="terminal"]:checked ~ #terminalCon{display: block;}

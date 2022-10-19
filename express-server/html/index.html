@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <title>SOURCE website</title>
+        <link rel="stylesheet" href="css.css">
+        <link rel="stylesheet" href="fontello/css/fontello.css"> 
+        
+    </head>
+    <body>
+        <div style="overflow: hidden;">
+            <div class="titleBar">
+                <p>index.html - web - Visual Studio Code</p>
+            </div>
+            <div class="navArea">
+                <p style="font-size: 12px; text-align: left; padding-left: 20px; padding-top: 10px; padding-bottom: 0; color: rgb(204,204,204);">EXPLORER</p>
+
+                <div id="menu"> 
+                    <ul class="tree">
+                        <li>
+                            <input type="checkbox" id="root">
+                            <label for="root">SOURCE</label>
+                            <ul>
+                                <li><a href="#">WEB</a></li>
+                                <li><a href="#">AI_robot</a></li>
+                                <li><a href="#">ARDUINO</a></li>
+                                <li><a href="#">PYTHON.1</a></li>
+                                <li><a href="#">PYTHON.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <nav class="tabButtonNav">
+                    <input type="radio" name="tab" id="tab1" onclick="showCon(event)" checked> </input><label for="tab1">index.html</label>
+                    <input type="radio" name="tab" id="tab2" onclick="showCon(event)"></input> <label for="tab2">css.css</label>
+                    <input type="radio" name="tab" id="tab3" onclick="showCon(event)"></input> <label for="tab3">tabMenu.js</label>
+                    <!--TODO: label간 간격 제거-->
+                    
+                    
+                </nav>
+                
+                <div class="conbox" id="con1"></div>
+                <div class="conbox"id="con2">콘텐츠2</div>
+                <div class="conbox" id="con3">콘텐츠3</div>
+
+                
+            </div>
+
+            <div class="designWrap">
+                <input type="radio" name="designTab" id="problems" checked></input> <label for="problems">PROBLEMS</label>
+                <input type="radio" name="designTab" id="output"></input> <label for="output">OUTPUT</label>
+                <input type="radio" name="designTab" id="debugConsole"></input> <label for="debugConsole">DEBUG CONSOLE</label>
+                <input type="radio" name="designTab" id="terminal"></input> <label for="terminal">TERMINAL</label>
+
+                <div class="designConbox" id="problemsCon">No problems have been detected in the workspace.</div>
+                <div class="designConbox" id="outputCon">l</div>
+                <div class="designConbox" id="debugCon"></div>
+                <div class="designConbox" id="terminalCon">PS C:\Users\Source\Desktop\WebPage</div>
+            </div>
+        </div>
+       <script src="./tabMenu.js"></script>
+    </body>
+</html>
